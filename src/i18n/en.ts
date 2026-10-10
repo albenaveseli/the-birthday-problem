@@ -90,9 +90,9 @@ export const en = {
   's3.intro':
     'A cryptographic hash maps any input to a fixed-size fingerprint. Full SHA-256 has 256 output bits, far too many to attack. So we **truncate** SHA-256 to its first k bits. That gives a toy hash with N = 2^{k} outputs that behaves like the real thing, only smaller. Every hash below is computed live in your browser.',
   's3.def.collision':
-    '**Collision:** find *any* two different messages with the same hash. Expected work ≈ 2^{k/2}.',
+    '**Collision:** find *any* two different messages with the same hash. Protected by *strong collision resistance*. Expected work ≈ 2^{k/2}.',
   's3.def.preimage':
-    '**Second preimage:** given *one* message, find a different one with the same hash. Expected work ≈ 2^{k}.',
+    '**Second preimage:** given *one* message, find a different one with the same hash. Protected by *weak collision resistance*. Expected work ≈ 2^{k}.',
   's3.bits': 'Hash size k',
   's3.run.collision': 'Run birthday attack',
   's3.run.preimage': 'Run preimage attack',
@@ -147,7 +147,7 @@ export const en = {
   's4.broken': 'Broken',
   's4.secure': 'Secure',
   's4.known.md5':
-    'Collisions in seconds on a laptop (Wang et al., 2004). Used to forge a Microsoft code-signing certificate for the Flame malware (2012).',
+    'First collision published in 2004 (Wang et al.); today found in seconds on a laptop. A chosen-prefix collision was used to forge a Microsoft code-signing certificate for the Flame malware (2012).',
   's4.known.sha1':
     'SHAttered (2017): first public collision, about 2^{63} SHA-1 computations. Chosen-prefix collision “SHA-1 is a Shambles” (2020).',
   's4.known.none': 'Nothing better than the generic birthday attack.',
