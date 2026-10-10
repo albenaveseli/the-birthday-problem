@@ -113,6 +113,13 @@ export function S1Paradox() {
       </div>
 
       <RoomCard n={n} />
+
+      <div className="callout">
+        <p>
+          <T k="s1.live" />{' '}
+          <a href="#live">{t('s1.live.open')}</a>
+        </p>
+      </div>
     </Section>
   );
 }
